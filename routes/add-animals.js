@@ -3,7 +3,7 @@ const router  = express.Router();
 const animals = [];
 
 router.get('/add-animals',(req, res, next) => {
-    res.render('add-animals',{animalTitle : ' Please Add Animals'});
+    res.render('add-animals',{pageTitle : ' Please Add Animals'});
 })
 router.post('/view-animals',(req, res, next) => {
     animals.push({Type :req.body.Type,Color : req.body.Color});

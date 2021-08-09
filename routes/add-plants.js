@@ -7,9 +7,9 @@ router.get('/add-plants',(req, res, next) => {
 })
 
 router.post('/view-plants',(req, res, next) => {
-    plants.push({Type : req.body.Type,Color : req.body.Color})
+    plants.push({Type : req.body.Type,Color : req.body.Color,Price : req.body.Price})
     const plantss = plants;
-    res.render('view-plants',{pageTitle : 'Please View Plants'})
+    res.render('view-plants',{pageTitle : 'Please View Plants',plan : plantss})
 })
 
 module.exports = router;

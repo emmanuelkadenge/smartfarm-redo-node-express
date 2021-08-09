@@ -1,26 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= pagetitle %></title>
-    <link rel="stylesheet" href="/css/main.css">
+<%- include('includes/head.ejs')%>
 </head>
-
 <body>
-<header class="main-header">
-    <nav class="main-header__nav">
-        <ul class="main-header__item-list">
-            <li class="main-header__item"><a href="/">Main Farm</a></li>
-            <li class="main-header__item"><a href="/add-animals">Animals</a></li>
-            <li class="main-header__item"><a href="/add-plants">Plants</a></li>
-        </ul>
-    </nav>
-</header>
+<%- include('includes/navigation.ejs')%>
 <h1>Page Not Found!</h1>
 <p1>Please Come Back Later</p1>
-</body>
 
-</html>
+<%- include('includes/end.ejs')%>
+

@@ -1,27 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%=pageTitle%></title>
-    <link rel="stylesheet" href="/css/main.css">
+<%- include('includes/head.ejs')%>
     <link rel="stylesheet" href="/css/forms.css">
     <link rel="stylesheet" href="/css/animals.css">
 </head>
 
 <body>
-<header class="main-header">
-    <nav class="main-header__nav">
-        <ul class="main-header__item-list">
-            <li class="main-header__item"><a href="/">Main Farm</a></li>
-            <li class="main-header__item"><a href="/add-animals">Animals</a></li>
-            <li class="main-header__item"><a class="active" href="/add-plants">Plants</a></li>
-        </ul>
-    </nav>
-</header>
-
+<%- include('includes/navigation.ejs')%>
 <main>
     <form class="product-form" action="/view-plants" method="post">
         <div class="form-control">
@@ -29,11 +12,12 @@
             <input type="text" name="Type" id="Type">
             <label for="Color">Color</label>
             <input type="text" name="Color" id="Color">
+            <label for="Price">Price</label>
+            <input type="text" name="Price" id="Color">
         </div>
 
         <button class="btn" type="submit">Add Plant</button>
     </form>
 </main>
-</body>
 
-</html>
+<%- include('includes/end.ejs')%>
